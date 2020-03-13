@@ -1,6 +1,6 @@
 ### Pokémon Center App
 
-A Pokémon Center has approached you to build a web application to help them manage their Pokémon and nurses. A nurse may look after many Pokémon at a time. An Pokémon is registered with only one nurse.
+A Pokémon Center has approached you to build a web application to help them manage their Pokémon and nurses. A nurse may look after many Pokémon at a time. A Pokémon is registered with only one nurse.
 
 #### MVP
 
