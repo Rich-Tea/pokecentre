@@ -1,5 +1,5 @@
 DROP TABLE pkmns;
-DROP TABLE owners;
+DROP TABLE trainers;
 
 CREATE TABLE pkmns (
   id SERIAL primary key,
@@ -8,7 +8,7 @@ CREATE TABLE pkmns (
   pkmn_dob INT
 );
 
-CREATE TABLE owners (
+CREATE TABLE trainers (
   id SERIAL primary key,
   name VARCHAR(255),
   notes VARCHAR(255)
