@@ -5,7 +5,7 @@ CREATE TABLE pkmns (
   id SERIAL primary key,
   pkmn_name VARCHAR(255),
   pkmn_type VARCHAR(255),
-  pkmn_dob INT
+  pkmn_age INT
 );
 
 CREATE TABLE trainers (
