@@ -2,8 +2,7 @@ require_relative('../db/sql_runner')
 
 class Nurse
 
-  attr_accessor :nurse_name
-  attr_reader :id
+  attr_accessor :nurse_name, :id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -43,5 +42,6 @@ class Nurse
    values = [@id]
    SqlRunner.run(sql, values)
  end
+
 
 end

@@ -10,7 +10,7 @@ class Pokemon
     @pkmn_name = options['pkmn_name']
     @pkmn_type = options['pkmn_type']
     @pkmn_level = options['pkmn_level'].to_i
-    @trainer_contact = options['trainer_contact'].to_i
+    @trainer_contact = options['trainer_contact']
     @treatment = options['treatment']
     @nurse_id = options['nurse_id'].to_i if options['nurse_id']
  end
