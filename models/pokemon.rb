@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Pokemon
 
-  attr_accessor :pkmn_name, :pkmn_type, :pkmn_level
+  attr_accessor :pkmn_name, :pkmn_type, :pkmn_level, :trainer_contact, :treatment
   attr_reader :id
 
   def initialize(options)
@@ -10,6 +10,8 @@ class Pokemon
     @pkmn_name = options['pkmn_name']
     @pkmn_type = options['pkmn_type']
     @pkmn_level = options['pkmn_level'].to_i
+    @trainer_contact = options['trainer_contact'].to_i
+    @treatment = options['treatment']
  end
 
  def save()
@@ -44,6 +46,23 @@ class Pokemon
    sql = "DELETE FROM pkmns WHERE id = $1"
    values = [id]
    results = SqlRunner.run(sql, values)
+ end
+
+ def update
+   sql = "UPDATE pkmns
+   SET
+   (
+    pkmn_name
+    pkmn_type
+    pkmn_level
+    trainer_contact
+    treatment
+    ) =
+    (
+      $1, $2, $3, $5, $5
+      )
+    WHERE id = $6"
+   values = [@pkmn_name, @pkmn_type, @pkmn_level, @trainer_contact, @treatment, @id]
  end
 
 
