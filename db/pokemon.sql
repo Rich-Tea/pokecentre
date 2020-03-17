@@ -11,7 +11,7 @@ CREATE TABLE pkmns (
   pkmn_name VARCHAR(255),
   pkmn_type VARCHAR(255),
   pkmn_level INT,
-  trainer_contact INT,
+  trainer_contact VARCHAR(255),
   treatment VARCHAR(255),
-  nurse_id INT REFERENCES nurses(id)
+  nurse_id INT REFERENCES nurses(id) ON DELETE CASCADE
 );
