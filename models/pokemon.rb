@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Pokemon
 
-  attr_accessor :pkmn_name, :pkmn_type, :pkmn_level, :trainer_contact, :treatment
+  attr_accessor :pkmn_name, :pkmn_type, :pkmn_level, :trainer_contact, :treatment, :nurse_id
   attr_reader :id
 
   def initialize(options)
@@ -12,15 +12,16 @@ class Pokemon
     @pkmn_level = options['pkmn_level'].to_i
     @trainer_contact = options['trainer_contact'].to_i
     @treatment = options['treatment']
+    @nurse_id = options['nurse_id'].to_i if options['nurse_id']
  end
 
  def save()
    sql = "INSERT INTO pkmns
-            (pkmn_name, pkmn_type, pkmn_level, trainer_contact, treatment)
+            (pkmn_name, pkmn_type, pkmn_level, trainer_contact, treatment, nurse_id)
             VALUES
-            ($1, $2, $3, $4, $5)
+            ($1, $2, $3, $4, $5, $6)
             RETURNING id"
-   values = [@pkmn_name, @pkmn_type, @pkmn_level, @trainer_contact, @treatment]
+   values = [@pkmn_name, @pkmn_type, @pkmn_level, @trainer_contact, @treatment, @nurse_id]
    @id = SqlRunner.run(sql, values).first['id'].to_i
  end
 
@@ -63,6 +64,11 @@ class Pokemon
       )
     WHERE id = $6"
    values = [@pkmn_name, @pkmn_type, @pkmn_level, @trainer_contact, @treatment, @id]
+ end
+
+ def nurse
+   nurse = Nurse.find(@nurse_id)
+   return nurse
  end
 
 
