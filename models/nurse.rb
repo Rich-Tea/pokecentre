@@ -21,4 +21,10 @@ class Nurse
   @id = SqlRunner.run(sql, values).first['id'].to_i
   end
 
+ def self.all()
+   sql = "SELECT * FROM nurses"
+   results = SqlRunner.run(sql)
+   return results.map({|nurse| Nurse.new(nurse)}
+ end
+
 end
