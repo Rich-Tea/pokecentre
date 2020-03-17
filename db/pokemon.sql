@@ -3,7 +3,7 @@ DROP TABLE nurses;
 
 CREATE TABLE nurses (
   id SERIAL primary key,
-  name VARCHAR(255)
+  nurse_name VARCHAR(255)
 );
 
 CREATE TABLE pkmns (
