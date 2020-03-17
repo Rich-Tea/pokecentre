@@ -12,5 +12,6 @@ CREATE TABLE pkmns (
   pkmn_type VARCHAR(255),
   pkmn_level INT,
   trainer_contact INT,
-  treatment VARCHAR(255)
+  treatment VARCHAR(255),
+  nurse_id INT REFERENCES nurses(id)
 );
