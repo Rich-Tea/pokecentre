@@ -2,6 +2,7 @@ require('pry-byebug')
 require_relative('../models/pokemon.rb')
 require_relative('../models/nurse.rb')
 
+Pokemon.delete_all()
 
 pkmn1 = Pokemon.new({
   "pkmn_name" => "Pikachu", "pkmn_type" => "Electric", "pkmn_level" => 33
