@@ -30,7 +30,7 @@ pkmn5 = Pokemon.new(
 )
 
 pkmn6 = Pokemon.new(
-  { "pkmn_name" => "Exeggutor" "pkmn_type" => "Grass/Psychic" "pkmn_level" => 3}
+  { "pkmn_name" => "Exeggutor", "pkmn_type" => "Grass/Psychic", "pkmn_level" => 3}
 )
 
 
