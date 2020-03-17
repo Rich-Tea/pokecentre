@@ -45,6 +45,12 @@ pkmn4.save
 pkmn5.save
 pkmn6.save
 
+nurse1 = Nurse.new({
+  "nurse_name" => "Joy"
+  })
+
+
+nurse1.save
 
 
 binding.pry
