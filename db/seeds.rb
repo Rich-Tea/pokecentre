@@ -2,8 +2,9 @@ require('pry-byebug')
 require_relative('../models/pokemon.rb')
 require_relative('../models/nurse.rb')
 
-Pokemon.delete_all()
 Nurse.delete_all()
+Pokemon.delete_all()
+
 
 pkmn1 = Pokemon.new({
   "pkmn_name" => "Pikachu", "pkmn_type" => "Electric", "pkmn_level" => 33
@@ -49,8 +50,17 @@ nurse1 = Nurse.new({
   "nurse_name" => "Joy"
   })
 
+nurse2 = Nurse.new({
+  "nurse_name" => "Misty"
+  })
+
+nurse3 = Nurse.new({
+  "nurse_name" => "May"
+  })
 
 nurse1.save
+nurse2.save
+nurse3.save
 
 
 binding.pry
