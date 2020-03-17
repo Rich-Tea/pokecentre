@@ -27,4 +27,11 @@ class Nurse
    return results.map({|nurse| Nurse.new(nurse)}
  end
 
+ def self.id()
+   sql = "SELECT * FROM nurses WHERE id = $1"
+   values = [id]
+   results = SqlRunner.run(sql, values)
+   return Nurse.new(results.first)
+ end
+
 end
