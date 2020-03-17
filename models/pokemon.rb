@@ -23,21 +23,22 @@ class Pokemon
  end
 
  def self.all()
-    sql = "SELECT * FROM pkmns"
-    results = SqlRunner.run(sql)
-    return results.map{|pkmn| Pokemon.new(pkmn)}
-  end
+   sql = "SELECT * FROM pkmns"
+   results = SqlRunner.run(sql)
+   return results.map{|pkmn| Pokemon.new(pkmn)}
+ end
 
  def self.find(id)
-      sql = "SELECT * FROM pkmns WHERE id = $1"
-      values = [id]
-      results = SqlRunner.run(sql, values)
-      return Pokemon.new(results.first)
-    end
+   sql = "SELECT * FROM pkmns WHERE id = $1"
+   values = [id]
+   results = SqlRunner.run(sql, values)
+   return Pokemon.new(results.first)
+ end
 
  def self.delete_all()
-        sql = "DELETE FROM pkmns"
-        SqlRunner.run(sql)
-      end
+   sql = "DELETE FROM pkmns"
+   SqlRunner.run(sql)
+ end
+
 
 end
