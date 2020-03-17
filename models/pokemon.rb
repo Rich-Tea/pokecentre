@@ -16,11 +16,11 @@ class Pokemon
 
  def save()
    sql = "INSERT INTO pkmns
-            (pkmn_name, pkmn_type, pkmn_level)
+            (pkmn_name, pkmn_type, pkmn_level, trainer_contact, treatment)
             VALUES
-            ($1, $2, $3)
+            ($1, $2, $3, $4, $5)
             RETURNING id"
-   values = [@pkmn_name, @pkmn_type, @pkmn_level]
+   values = [@pkmn_name, @pkmn_type, @pkmn_level, @trainer_contact, @treatment]
    @id = SqlRunner.run(sql, values).first['id'].to_i
  end
 

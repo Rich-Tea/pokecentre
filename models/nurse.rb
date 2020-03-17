@@ -11,14 +11,14 @@ class Nurse
     @notes = options['notes']
  end
 
-# def save()
-#   sql = "INSERT INTO pkmns
-#            (nurse_name, records)
-#            VALUES
-#            ($1, $2)
-#            RETURNING id"
-#   values = [@nurse_name, @records]
-#   @id = SqlRunner.run(sql, values).first['id'].to_i
-#
-# end
+  def save()
+  sql = "INSERT INTO nurses
+           (nurse_name)
+           VALUES
+           ($1)
+           RETURNING id"
+  values = [@nurse_name]
+  @id = SqlRunner.run(sql, values).first['id'].to_i
+  end
+
 end
