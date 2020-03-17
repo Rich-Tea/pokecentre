@@ -34,4 +34,9 @@ class Nurse
    return Nurse.new(results.first)
  end
 
+ def self.delete_all()
+   sql = "DELETE FROM nurses"
+   SqlRunner.run(sql)
+ end
+
 end
