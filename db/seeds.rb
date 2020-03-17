@@ -29,32 +29,29 @@ pkmn1 = Pokemon.new({
 )
 
 pkmn2 = Pokemon.new({
-  "pkmn_name" => "Umbreon", "pkmn_type" => "Dark", "pkmn_level" => 24
+  "pkmn_name" => "Umbreon", "pkmn_type" => "Dark", "pkmn_level" => 24, "trainer_contact" => "email", "treatment" => "Asleep", "nurse_id" => nurse1.id
   }
 )
 
 pkmn3 = Pokemon.new({
-  "pkmn_name" => "Charizard", "pkmn_type" => "Fire", "pkmn_level" => 60
+  "pkmn_name" => "Charizard", "pkmn_type" => "Fire", "pkmn_level" => 60, "trainer_contact" => "phone", "treatment" => "Poisoned", "nurse_id" => nurse2.id
   }
 )
 
 pkmn4 = Pokemon.new({
-  "pkmn_name" => "Espeon", "pkmn_type" => "Psychic", "pkmn_level" => 15
+  "pkmn_name" => "Espeon", "pkmn_type" => "Psychic", "pkmn_level" => 15, "trainer_contact" => "phone", "treatment" => "Confused", "nurse_id" => nurse2.id
   }
 )
 
 pkmn5 = Pokemon.new({
-  "pkmn_name" => "Mawile", "pkmn_type" => "Steel/Fairy", "pkmn_level" => 55
+  "pkmn_name" => "Mawile", "pkmn_type" => "Steel/Fairy", "pkmn_level" => 55, "trainer_contact" => "phone", "treatment" => "Paralysed", "nurse_id" => nurse2.id
   }
 )
 
 pkmn6 = Pokemon.new({
-  "pkmn_name" => "Exeggutor", "pkmn_type" => "Grass/Psychic", "pkmn_level" => 47
+  "pkmn_name" => "Exeggutor", "pkmn_type" => "Grass/Psychic", "pkmn_level" => 47, "trainer_contact" => "SMS", "treatment" => "Burned", "nurse_id" => nurse3.id
   }
 )
-
-
-
 
 pkmn1.save
 pkmn2.save
