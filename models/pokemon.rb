@@ -40,5 +40,11 @@ class Pokemon
    SqlRunner.run(sql)
  end
 
+ def delete
+   sql = "DELETE FROM pkmns WHERE id = $1"
+   values = [id]
+   results = SqlRunner.run(sql, values)
+ end
+
 
 end
