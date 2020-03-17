@@ -28,5 +28,11 @@ class Pokemon
     return results.map{|pkmn| Pokemon.new(pkmn)}
   end
 
+  def self.find(id)
+      sql = "SELECT * FROM pkmns WHERE id = $1"
+      values = [id]
+      results = SqlRunner.run(sql, values)
+      return Pokemon.new(results.first)
+    end
 
 end
