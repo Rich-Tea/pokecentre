@@ -39,4 +39,10 @@ class Nurse
    SqlRunner.run(sql)
  end
 
+ def delete
+   sql = "DELETE FROM nurses WHERE id = $1"
+   values = [@id]
+   SqlRunner.run(sql, values)
+ end
+
 end
