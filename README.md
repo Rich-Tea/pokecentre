@@ -6,7 +6,7 @@ A Pokémon Center has approached you to build a web application to help them man
 
 - The Center wants to be able to register / track Pokémon. Important information for the nurse to know is -
   - Name
-  - Date Of Birth (use a VARCHAR initially)
+  - Pokėmon level (use a VARCHAR initially)
   - Type of Pokémon
   - Contact details for the owner
   - Treatment notes
