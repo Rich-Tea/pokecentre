@@ -8,5 +8,9 @@ also_reload('./models/*')
 
 get '/pokemon' do
   @pokemon = Pokemon.all()
-  erb(:'index')
+  erb(:'pokemon/index')
+end
+
+get '/pokemon/new' do # new
+  erb(:'pokemon/new')
 end
