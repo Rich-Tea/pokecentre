@@ -1,10 +1,19 @@
-<p>test</p>
-<p>test 2</p>
-<p>test 3?</p>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pokémon Centre</title>
+  </head>
+  <body>
+    <nav id="menu">
+      <li class="menu-item"><a href='/'>Home</a></li>
+      <li class="menu-item"><a href='/pokemon'>Pokémon</a></li>
+      <li class="menu-item"><a href='/nurses'>Nurses</a></li>
+      <li class="menu-item"><a href='/pokemon/new'>Leave Pokémon at centre</a></li>
+      <li class="menu-item"><a href='/nurses/add'>Assign new nurse</a></li>
+    </nav>
+    <%= yield %>
 
 
-<h1>why is this here</h1>
-
-<p>i am in layout<p>
-
-<%= yield %>
+  </body>
+</html>
