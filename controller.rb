@@ -1,6 +1,0 @@
-require('sinatra')
-require('sinatra/contrib/all')
-require_relative('./db/sql_runner.rb')
-require_relative('./models/pokemon')
-require_relative('./models/nurse')
-also_reload('./models/*')
